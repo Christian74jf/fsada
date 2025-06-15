@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Formulario de Cotización de Viajes</title> 
+  <link rel="stylesheet" href="diseños de mielcoles.css"> 
+</head> 
+<body> 
+  <div class="form-container"> 
+    <h1>Formulario de Cotización de Viajes</h1> 
+    <form action="#" method="post"> 
+      <fieldset> 
+        <legend>Datos del Cliente</legend> 
+
+        <label for="nombre">Nombre completo:</label> 
+        <input type="text" id="nombre" name="nombre" required placeholder="Nombre completo">
+
+        <label for="correo">Correo electrónico:</label> 
+        <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+
+        <label for="telefono">Número de teléfono:</label> 
+        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{8}" placeholder="12345678">
+      </fieldset>
+
+      <fieldset>
+        <legend>Información del Viaje</legend>
+
+        <label for="pais">País de destino:</label>
+        <select id="pais" name="pais" required>
+          <option value="">--Seleccione--</option>
+          <option value="mexico">México</option>
+          <option value="guatemala">Guatemala</option>
+          <option value="españa">España</option>
+          <option value="francia">Francia</option>
+        </select>
+
+        <label for="salida">Fecha de salida:</label>
+        <input type="date" id="salida" name="salida" required>
+
+        <label for="regreso">Fecha de regreso:</label>
+        <input type="date" id="regreso" name="regreso" required>
+
+        <label for="personas">Cantidad de personas:</label>
+        <input type="number" id="personas" name="personas" required min="1" max="100" placeholder="1">
+
+        <label>Tipo de paquete:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="paquete" value="economico" required> Económico</label>
+          <label><input type="radio" name="paquete" value="estandar"> Estándar</label>
+          <label><input type="radio" name="paquete" value="vip"> VIP</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias y Comentarios</legend>
+
+        <label>Servicios adicionales:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="servicios" value="hotel"> Hotel</label>
+          <label><input type="checkbox" name="servicios" value="transporte"> Transporte</label>
+          <label><input type="checkbox" name="servicios" value="seguro"> Seguro</label>
+          <label><input type="checkbox" name="servicios" value="guia"> Guía</label>
+        </div>
+
+        <label for="comentarios">Comentarios del cliente:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus preferencias o dudas..."></textarea>
+
+        <label for="archivo">Adjuntar archivo PDF con pasaportes escaneados:</label>
+        <input type="file" id="archivo" name="archivo" accept="application/pdf">
+      </fieldset>
+
+      <div class="botones"> 
+        <button type="submit">Enviar cotización</button> 
+        <button type="reset">Restablecer</button> 
+      </div> 
+    </form> 
+  </div> 
+</body> 
+</html>
